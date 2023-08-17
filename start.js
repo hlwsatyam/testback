@@ -11,14 +11,14 @@ app.use(express.json())
 
 app.post("/table", (req, res) => {
     const { text } = req.body
-    res.send("Data gone!")
+    res.send("Upcomimg data is:", text)
     console.log("comming data is:", text)
 })
+let x = 0
 app.get("/", (req, res) => {
 
-
     console.log(": data :")
-    res.send("Data came!")
+    res.send(`Data came! ${x++}`)
 })
 
 app.listen(PORT, () => {
